@@ -31,8 +31,12 @@
                 if(status==='1'){
                     $.post("./api/chkpw.php",{pw,acc},function(chkpw){
                       if(chkpw==='1'){
+                          if(acc="admin"){
+                            location.href="index.php";
+                          }else{
                             alert("成功囉");
-                           location.href="index.php";
+                            location.href="index.php";
+                          }
                            
                       }else{
                         alert("密碼錯誤");
